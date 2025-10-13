@@ -12,7 +12,15 @@ export default defineConfig({
     setupFiles: './src/tests/setup.js',
     coverage: {
       reporter: ['text', 'html'],
-      exclude: ['node_modules/', 'src/tests/setup.js', 'eslint.config.js']
+      exclude: [
+        '**/node_modules/**', 
+        '**/tests/**',   
+        'eslint.config.js',
+        'src/main.tsx',
+        'src/App.tsx',
+        '**/dist/**',  
+        'vite.config.ts'     
+      ]
     }
   }
 })
