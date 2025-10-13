@@ -1,5 +1,25 @@
 {
-    "conventionalCommits.scopes": [
-        "tests"
-    ]
+  "conventionalCommits.scopes": ["tests"],
+
+  "editor.wordBasedSuggestions": "allDocuments",
+  "editor.parameterHints.enabled": true,
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.enabled": true,
+  "javascript.suggest.enabled": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    "node_modules": true
+  },
+  "vitest.enable": true,
+  "eslint.enable": true,
+  "prettier.requireConfig": false,
+  "editor.quickSuggestions": {
+    "other": true,
+    "comments": false,
+    "strings": true
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.tabCompletion": "on"
 }
