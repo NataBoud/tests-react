@@ -1,5 +1,5 @@
 {
-  "conventionalCommits.scopes": ["tests"],
+  "conventionalCommits.scopes": ["tests", "rtl"],
 
   "editor.wordBasedSuggestions": "allDocuments",
   "editor.parameterHints.enabled": true,
