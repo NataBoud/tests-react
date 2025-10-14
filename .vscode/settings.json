@@ -2,7 +2,8 @@
   "conventionalCommits.scopes": [
     "tests",
     "rtl",
-    "interactions"
+    "interactions",
+    "mock-global"
   ],
 
   "editor.wordBasedSuggestions": "allDocuments",
