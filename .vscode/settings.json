@@ -3,7 +3,8 @@
     "tests",
     "rtl",
     "interactions",
-    "mock-global"
+    "mock-global",
+    "test-integration"
   ],
 
   "editor.wordBasedSuggestions": "allDocuments",
