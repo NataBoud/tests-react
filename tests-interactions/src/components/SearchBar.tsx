@@ -27,16 +27,16 @@ export default function SearchBar({ onSearch }: SearchBarProps) {
 
     const isDisabled = query.trim().length === 0;
 
-  return (
-    <div>
-      <input
-        type="text"
-        placeholder="Rechercher..."
-        value={query}
-        onChange={handleChange}
-        onKeyDown={handleKeyDown}
-      />
-      <button onClick={handleSearch} disabled={isDisabled}>Rechercher</button>
-    </div>
-  )
+    return (
+        <div>
+            <input
+                type="text"
+                placeholder="Rechercher..."
+                value={query}
+                onChange={handleChange}
+                onKeyDown={handleKeyDown}
+            />
+            <button onClick={handleSearch} disabled={isDisabled}>Rechercher</button>
+        </div>
+    )
 }

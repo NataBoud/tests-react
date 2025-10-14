@@ -8,3 +8,6 @@ formation
 
 ### React Testing Library (RTL)
 ![rtl-tests](./tests-unitaires/public/rtl-tests.png)
+
+### React Testing Interactions
+![interactions-tests](./tests-interactions/public/interactions.png)
