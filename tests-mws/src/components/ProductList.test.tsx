@@ -13,7 +13,7 @@ describe("ProductList HTTP simulé", () => {
 
         // Après chargement
         const clavier = await screen.findByText(/clavier/i);
-        const souris = screen.getByText(/souris/i);
+        const souris = await screen.findByText(/souris/i);
 
         expect(clavier).toBeInTheDocument();
         expect(souris).toBeInTheDocument();
