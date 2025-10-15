@@ -4,7 +4,8 @@
     "rtl",
     "interactions",
     "mock-global",
-    "test-integration"
+    "test-integration",
+    "msw"
   ],
 
   "editor.wordBasedSuggestions": "allDocuments",
