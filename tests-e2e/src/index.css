@@ -1,0 +1,38 @@
+body {
+  font-family: system-ui, sans-serif;
+  padding: 2rem;
+  background-color: #f9fafb;
+  box-sizing: border-box; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.4rem 0.6rem;
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+}
+
+ul {
+  margin-top: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
