@@ -5,7 +5,8 @@
     "interactions",
     "mock-global",
     "test-integration",
-    "msw"
+    "msw",
+    "e2e"
   ],
 
   "editor.wordBasedSuggestions": "allDocuments",
