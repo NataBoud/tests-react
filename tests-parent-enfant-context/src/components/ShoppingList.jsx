@@ -17,7 +17,7 @@ export function ShoppingList() {
   return (
     <div>
       <h2>ShoppingList</h2>
-      <p>Total : {items.length}</p>
+      <p>Total items : {items.length}</p>
 
       <input
         type="text"

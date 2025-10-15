@@ -14,10 +14,15 @@ describe("ShoppingList (integration parent/enfant + contexte)", () => {
     renderWithProvider(<ShoppingList />)
 
     // vérifier que le total est à 0 au départ
-    expect(screen.getByText(/Total : 0/i)).toBeInTheDocument();
+    expect(
+      screen.getByText((content) => /total(?:\s+\w+)?\s*[:\-]?\s*0/i.test(content))
+    ).toBeInTheDocument();
+
+    const input = screen.getByPlaceholderText(/Nouvel article/i);
 
     // Aucun article affiché
     expect(screen.getByText(/Aucun article/i)).toBeInTheDocument();
+    expect(input).toBeInTheDocument();
 
     //  désactiver le bouton si input vide
     const addButton = screen.getByRole('button', { name: /ajouter/i });
@@ -39,7 +44,9 @@ describe("ShoppingList (integration parent/enfant + contexte)", () => {
     // L'article "Lait" apparaît dans la liste
     expect(screen.getByText(/lait/i)).toBeInTheDocument();
     expect(input.value).toBe('');
-    expect(screen.getByText(/total : 1/i)).toBeInTheDocument();
+    expect(
+      screen.getByText((content) => /total(?:\s+\w+)?\s*[:\-]?\s*1/i.test(content))
+    ).toBeInTheDocument();
 
   })
 
@@ -62,7 +69,9 @@ describe("ShoppingList (integration parent/enfant + contexte)", () => {
     expect(screen.getByText(/pain/i)).toBeInTheDocument();
 
     // Le total 
-    expect(screen.getByText(/Total : 2/i)).toBeInTheDocument();
+    expect(
+      screen.getByText((content) => /total(?:\s+\w+)?\s*[:\-]?\s*2/i.test(content))
+    ).toBeInTheDocument();
 
     // cocher la case du 1 article
     const firstCheckbox = screen.getAllByRole('checkbox')[0];
@@ -87,7 +96,9 @@ describe("ShoppingList (integration parent/enfant + contexte)", () => {
     await userEvent.click(addButton);
 
     // Le total 
-    expect(screen.getByText(/Total : 2/i)).toBeInTheDocument();
+    expect(
+      screen.getByText((content) => /total(?:\s+\w+)?\s*[:\-]?\s*2/i.test(content))
+    ).toBeInTheDocument();
 
     // Suppression 
     const deleteButtons = screen.getAllByRole('button', { name: /Supprimer/i });
@@ -96,7 +107,9 @@ describe("ShoppingList (integration parent/enfant + contexte)", () => {
     expect(screen.queryByText(/lait/i)).not.toBeInTheDocument();
 
     // Le total 
-    expect(screen.getByText(/Total : 1/i)).toBeInTheDocument();
+    expect(
+      screen.getByText((content) => /total(?:\s+\w+)?\s*[:\-]?\s*1/i.test(content))
+    ).toBeInTheDocument();
 
     expect(screen.getByText(/pain/i)).toBeInTheDocument();
 
